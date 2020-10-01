@@ -13,7 +13,7 @@
       android:orientation="horizontal"
       app:layout_constraintGuide_percent=".7"
       />
-  `
+
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/verticalGuideline"
