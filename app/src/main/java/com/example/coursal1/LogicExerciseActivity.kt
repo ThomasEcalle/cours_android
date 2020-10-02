@@ -37,4 +37,6 @@ class LogicExerciseActivity : AppCompatActivity(), TextWatcher
   {
     Log.d(LogicExerciseActivity::class.simpleName, "onTextChanged: $text")
   }
+
+
 }
