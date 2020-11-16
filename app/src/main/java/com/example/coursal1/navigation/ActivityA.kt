@@ -30,7 +30,7 @@ class ActivityA : AppCompatActivity()
     {
       32 ->
       {
-        val name = data?.getStringExtra("name")
+        val name = data?.getStringExtra(ActivityC.RESULT_KEY)
         buttonC?.text = name
       }
     }

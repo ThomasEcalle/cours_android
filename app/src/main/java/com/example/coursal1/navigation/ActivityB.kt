@@ -12,6 +12,8 @@ class ActivityB : AppCompatActivity()
 
   companion object
   {
+    val MY_CONSTANT = "toto"
+
     fun navigateTo(context: Context, id: Int)
     {
       val intent = Intent(context, ActivityB::class.java)

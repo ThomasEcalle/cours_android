@@ -1,6 +1,5 @@
 package com.example.coursal1.navigation
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +8,10 @@ import kotlinx.android.synthetic.main.activity_c.*
 
 class ActivityC : AppCompatActivity()
 {
+  companion object
+  {
+    val RESULT_KEY = "babar"
+  }
 
   override fun onCreate(savedInstanceState: Bundle?)
   {
@@ -17,7 +20,7 @@ class ActivityC : AppCompatActivity()
 
     validate?.setOnClickListener {
       val intent = Intent()
-      intent.putExtra("name", editText?.text.toString())
+      intent.putExtra(RESULT_KEY, editText?.text.toString())
       setResult(32, intent)
       finish()
     }
