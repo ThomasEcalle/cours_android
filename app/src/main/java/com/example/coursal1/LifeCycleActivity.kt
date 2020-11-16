@@ -15,6 +15,7 @@ class LifeCycleActivity : AppCompatActivity(), View.OnClickListener
     Log.d(LifeCycleActivity::class.simpleName, "onCreate")
     validateButton?.setOnClickListener(this)
 
+
     savedInstanceState?.getString("toto")?.let { lastResultValue ->
       result?.text = lastResultValue
     }
@@ -24,7 +25,6 @@ class LifeCycleActivity : AppCompatActivity(), View.OnClickListener
   {
     outState.putString("toto", result?.text?.toString())
     super.onSaveInstanceState(outState)
-
   }
 
   override fun onStart()
