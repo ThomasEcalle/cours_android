@@ -19,7 +19,7 @@ class SimpleFragmentActivity : AppCompatActivity(), DummyInterface
   override fun myDummyMethod(value: String?)
   {
     supportFragmentManager
-        .beginTransaction()
+      .beginTransaction()
       .replace(R.id.container, BFragment.newInstance())
       .commitNow()
   }
