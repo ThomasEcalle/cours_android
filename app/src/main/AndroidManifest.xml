@@ -9,14 +9,18 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".NavigationDestinationActivity">
+    <activity android:name=".navigation_exercise.WeightActivity">
     </activity>
-    <activity android:name=".NavigationBaseActivity">
+    <activity android:name=".navigation_exercise.NameActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+    </activity>
+    <activity android:name=".NavigationDestinationActivity">
+    </activity>
+    <activity android:name=".NavigationBaseActivity">
     </activity>
     <activity
         android:name=".LifeCycleActivity"
