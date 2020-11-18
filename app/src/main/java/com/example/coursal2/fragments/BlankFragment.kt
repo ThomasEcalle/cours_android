@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.coursal2.R
+import kotlinx.android.synthetic.main.fragment_blank.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -36,7 +36,7 @@ class BlankFragment : Fragment()
   override fun onViewCreated(view: View, savedInstanceState: Bundle?)
   {
     super.onViewCreated(view, savedInstanceState)
-    view.findViewById<TextView>(R.id.param2TextView).text = param2
+    param2TextView.text = param2
   }
 
   companion object
