@@ -2,4 +2,6 @@
   <string name="app_name">Cours AL 2</string>
   <string name="title">Hello les AL2</string>
   <string name="subtitle">Mon Sous-titre</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
