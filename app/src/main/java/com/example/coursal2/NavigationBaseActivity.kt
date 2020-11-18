@@ -8,6 +8,10 @@ import kotlinx.android.synthetic.main.activity_navigation_base.*
 
 class NavigationBaseActivity : AppCompatActivity(), View.OnClickListener
 {
+  companion object
+  {
+    val REQUEST_CODE = 32
+  }
 
   override fun onCreate(savedInstanceState: Bundle?)
   {
@@ -18,18 +22,24 @@ class NavigationBaseActivity : AppCompatActivity(), View.OnClickListener
 
   override fun onClick(view: View?)
   {
+    NavigationDestinationActivity.navigateTo(this, 42)
+    /*
     val intent = Intent(this, NavigationDestinationActivity::class.java)
     intent.putExtra("test", 42)
-    startActivityForResult(intent, 32)
+    startActivityForResult(intent, REQUEST_CODE)
+    */
   }
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
   {
     super.onActivityResult(requestCode, resultCode, data)
-    if (requestCode == 32)
+    when (resultCode)
     {
-      val result = data?.extras?.get("some_key") as String?
-      titleView?.text = result
+      REQUEST_CODE ->
+      {
+        val value = data?.getStringExtra(NavigationDestinationActivity.RESULT_KEY)
+        button?.text = value
+      }
     }
   }
 }
