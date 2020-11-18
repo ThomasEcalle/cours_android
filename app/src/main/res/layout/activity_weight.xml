@@ -5,7 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".navigation_exercise.WeightActivity"
+    tools:context=".navigation_exercise.NameActivity"
     >
+
+  <TextView
+      android:id="@+id/nameTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toTopOf="@id/weightEditText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <EditText
+      android:id="@+id/weightEditText"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:inputType="number"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <Button
+      android:id="@+id/validateWeight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Validate"
+      android:layout_marginTop="30dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/weightEditText"
+      />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
