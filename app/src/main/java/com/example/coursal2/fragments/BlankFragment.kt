@@ -1,6 +1,8 @@
 package com.example.coursal2.fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +13,11 @@ import kotlinx.android.synthetic.main.fragment_blank.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class BlankFragment : Fragment()
+class BlankFragment : Fragment(), View.OnClickListener
 {
   private var param1: String? = null
   private var param2: String? = null
+  private var blankFragmentListener: BlankFragmentListener? = null
 
   override fun onCreate(savedInstanceState: Bundle?)
   {
@@ -37,17 +40,38 @@ class BlankFragment : Fragment()
   {
     super.onViewCreated(view, savedInstanceState)
     param2TextView.text = param2
+    param2TextView?.setOnClickListener(this)
+  }
+
+  /*
+  override fun onAttach(context: Context)
+  {
+    super.onAttach(context)
+    try
+    {
+      blankFragmentListener = activity as BlankFragmentListener
+    } catch (exception: ClassCastException)
+    {
+      Log.e("error", "${activity?.packageName} must implement BlankFragmentListener")
+    }
+  }
+  */
+
+  override fun onClick(view: View?)
+  {
+    blankFragmentListener?.onNumberRetrieved(42)
   }
 
   companion object
   {
     @JvmStatic
-    fun newInstance(param1: String, param2: String) =
+    fun newInstance(param1: String, param2: String, blankFragmentListener: BlankFragmentListener) =
       BlankFragment().apply {
         arguments = Bundle().apply {
           putString(ARG_PARAM1, param1)
           putString(ARG_PARAM2, param2)
         }
+        this.blankFragmentListener = blankFragmentListener
       }
   }
 }
