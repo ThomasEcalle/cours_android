@@ -9,15 +9,16 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".qualifiers.QualifiersActivity">
+    <activity android:name=".recyclerview.MyRecyclerActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name=".qualifiers.QualifiersActivity">
+    </activity>
     <activity android:name=".fragments.exercise.ActivityA">
-
     </activity>
     <activity android:name=".fragments.FirstFragmentActivity">
     </activity>
