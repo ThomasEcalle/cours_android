@@ -41,6 +41,8 @@ dependencies {
   implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
   implementation 'androidx.recyclerview:recyclerview:1.0.0'
+  implementation "org.jetbrains.anko:anko:0.10.8"
+  implementation 'com.google.code.gson:gson:2.8.6'
 
   testImplementation 'junit:junit:4.12'
   androidTestImplementation 'androidx.test.ext:junit:1.1.2'
