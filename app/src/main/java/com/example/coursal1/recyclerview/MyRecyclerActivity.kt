@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coursal1.R
 import kotlinx.android.synthetic.main.activity_my_recycler.*
 
-class MyRecyclerActivity : AppCompatActivity(), OnUserClickedListener
+class MyRecyclerActivity : AppCompatActivity(), UserViewHolder.OnUserClickedListener
 {
   private val users = listOf(
     User("John", "Cena", "Lorem ipsum"),

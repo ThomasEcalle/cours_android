@@ -10,6 +10,11 @@ import com.example.coursal1.R
 class UserViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
   RecyclerView.ViewHolder(inflater.inflate(R.layout.user_item, parent, false)), View.OnClickListener
 {
+  interface OnUserClickedListener
+  {
+    fun onUserClicked(user: User?)
+  }
+
   private var fullNameTextView: TextView? = null
   private var addressTextView: TextView? = null
   private var user: User? = null
