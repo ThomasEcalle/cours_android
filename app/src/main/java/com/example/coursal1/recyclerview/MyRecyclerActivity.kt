@@ -1,12 +1,13 @@
 package com.example.coursal1.recyclerview
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coursal1.R
 import kotlinx.android.synthetic.main.activity_my_recycler.*
 
-class MyRecyclerActivity : AppCompatActivity()
+class MyRecyclerActivity : AppCompatActivity(), OnUserClickedListener
 {
   private val users = listOf(
     User("John", "Cena", "Lorem ipsum"),
@@ -26,7 +27,12 @@ class MyRecyclerActivity : AppCompatActivity()
 
     recyclerView?.apply {
       layoutManager = LinearLayoutManager(this@MyRecyclerActivity)
-      adapter = UserAdapter(users)
+      adapter = UserAdapter(users, this@MyRecyclerActivity)
     }
+  }
+
+  override fun onUserClicked(user: User?)
+  {
+    Log.d("totoro", user.toString())
   }
 }
