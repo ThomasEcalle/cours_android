@@ -2,10 +2,15 @@ package com.example.coursal1.room.dao
 
 import androidx.room.*
 import com.example.coursal1.room.entities.User
+import com.example.coursal1.room.models.UserAndLibrary
 
 @Dao
 interface UserDao
 {
+  @Transaction
+  @Query("SELECT * FROM user")
+  fun getUsersAndLibraries(): List<UserAndLibrary>
+
   @Query("SELECT * FROM user")
   fun getAll(): List<User>
 
